@@ -12,16 +12,19 @@ except:
 scriptPath = os.path.dirname(os.sys.argv[0]).replace("\\", "/")
 sys.path.append(scriptPath)
 
-sys_name = "windows" if sys.platform.startswith('win') else "linux"
-sys.path.append(os.path.join(scriptPath, sys_name))
-if sys.version[0] == "2":
+if sys.platform.startswith('win'):
+    sys.path.append(os.path.join(scriptPath, 'windows'))
+    if sys.version[0] == "2":
+        import script
+
+    if sys.version[:3] == "3.7":
+        import script37 as script
+
+    if sys.version[:3] == "3.9":
+        import script39 as script
+else:
+    sys.path.append(os.path.join(scriptPath, 'linux'))
     import script
-
-if sys.version[:3] == "3.7":
-    import script37 as script
-
-if sys.version[:3] == "3.9":
-    import script39 as script
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-task", help='task id', type=str)

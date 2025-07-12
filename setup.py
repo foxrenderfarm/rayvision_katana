@@ -15,7 +15,7 @@ setup(
     name='rayvision_katana',
     author='Shenzhen Rayvision Technology Co., Ltd',
     author_email='developer@rayvision.com',
-    url='',
+    url='https://github.com/renderbus/rayvision_katana.git',
     package_dir={'': '.'},
     packages=find_packages('.'),
     description='A Python-based API for Using Renderbus cloud rendering service.',
@@ -28,5 +28,5 @@ setup(
         'Programming Language :: Python :: 3',
     ],
     use_scm_version=True,
-    setup_requires=['setuptools_scm'],
+    setup_requires=['setuptools_scm<8.0.0']
 )
