@@ -21,7 +21,9 @@ setup(
     description='A Python-based API for Using Renderbus cloud rendering service.',
     entry_points={},
     install_requires=list(parse_requirements('requirements.txt')),
-    package_data={},
+    package_data={
+        'rayvision_katana': ['./windows/*', './linux/*', 'filter.txt']
+    },
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
