@@ -11,7 +11,7 @@ from rayvision_api.utils import update_task_info, append_to_task, append_to_uplo
 # API Parameter
 render_para = {
     "domain": "task.renderbus.com",
-    "platform": "2",
+    "platform": "62",
     "access_id": "xxx",
     "access_key": "xxxxx",
 }
